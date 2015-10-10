@@ -6,13 +6,13 @@
 //  Copyright © 2015 apps. All rights reserved.
 //
 
-#import "FirstViewController.h"
-#import "CellFirstViewController.h"
+#import "MainFeedTableViewController.h"
+#import "MainFeedCellXib.h"
 #import "CameraImageDelegate.h"
 #import "UserPinClass.h"
-#import "PinManager.h"
+#import "NoteSingleton.h"
 
-@interface FirstViewController () <UITableViewDataSource, UITableViewDelegate, CameraImageDelegate, UIImagePickerControllerDelegate>
+@interface MainFeedTableViewController () <UITableViewDataSource, UITableViewDelegate, CameraImageDelegate, UIImagePickerControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic) NSMutableArray *pins;
 @property (nonatomic) UIImage *pinnedImage;
@@ -24,19 +24,7 @@
 
 @end
 
-@implementation FirstViewController
-
-- (void)customSetup
-{
-    SWRevealViewController *revealViewController = self.revealViewController;
-    if ( revealViewController )
-    {
-        [self.settingsButton addTarget:self.revealViewController action:@selector(revealToggle:) forControlEvents:UIControlEventTouchUpInside];
-//        [self.settingsButton setTarget: self.revealViewController];
-//        [self.settingsButton setAction: @selector( revealToggle: )];
-        [self.navigationController.navigationBar addGestureRecognizer: self.revealViewController.panGestureRecognizer];
-    }
-}
+@implementation MainFeedTableViewController
 
 - (void)alertTheViewAboutCamera {
     
@@ -49,7 +37,7 @@
     [alert show];
 }
 
-- (void)customCellDidHitCameraButton:(CellFirstViewController *)cell {
+- (void)customCellDidHitCameraButton:(MainFeedCellXib *)cell {
     
     self.selectedIndexPath = [self.tableView indexPathForCell:cell];
     
@@ -95,16 +83,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self customSetup];
-    
     self.picker = [[UIImagePickerController alloc] init];
     
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     
-    [self.tableView registerNib:[UINib nibWithNibName:@"CellFirstViewController" bundle:nil] forCellReuseIdentifier:@"CellIdentifier"];
+    [self.tableView registerNib:[UINib nibWithNibName:@"MainFeedCellXib" bundle:nil] forCellReuseIdentifier:@"CellIdentifier"];
     
-    self.pins = [PinManager sharedManager].pinsArray;
+    self.pins = [NoteSingleton sharedManager].pinsArray;
     
     NSLog(@"Pins Array: %@", self.pins);
     
@@ -125,7 +111,8 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    CellFirstViewController *cell = [tableView dequeueReusableCellWithIdentifier:@"CellIdentifier" forIndexPath:indexPath];
+    
+    MainFeedCellXib *cell = [tableView dequeueReusableCellWithIdentifier:@"CellIdentifier" forIndexPath:indexPath];
     
     UserPinClass *pin = [self.pins objectAtIndex:indexPath.row];
     
@@ -186,35 +173,5 @@
     [self.tableView reloadData];
 }
 
-
-#pragma mark state preservation / restoration
-
-- (void)encodeRestorableStateWithCoder:(NSCoder *)coder
-{
-    NSLog(@"%s", __PRETTY_FUNCTION__);
-    
-    // Save what you need here
-    
-    [super encodeRestorableStateWithCoder:coder];
-}
-
-
-- (void)decodeRestorableStateWithCoder:(NSCoder *)coder
-{
-    NSLog(@"%s", __PRETTY_FUNCTION__);
-    
-    // Restore what you need here
-    
-    [super decodeRestorableStateWithCoder:coder];
-}
-
-
-- (void)applicationFinishedRestoringState
-{
-    NSLog(@"%s", __PRETTY_FUNCTION__);
-    
-    // Call whatever function you need to visually restore
-    [self customSetup];
-}
 
 @end

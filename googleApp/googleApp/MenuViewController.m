@@ -8,21 +8,7 @@
 
 #import "MenuViewController.h"
 
-
-@implementation SWUITableViewCell
-@end
-
 @implementation MenuViewController
-
-- (void) prepareForSegue: (UIStoryboardSegue *) segue sender: (id) sender
-{
-    // configure the destination view controller:
-    if ( [sender isKindOfClass:[UITableViewCell class]] )
-    {
-        UINavigationController *navController = segue.destinationViewController;
-
-    }
-}
 
 
 - (void)viewDidLoad {

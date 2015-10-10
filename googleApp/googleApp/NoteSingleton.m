@@ -6,14 +6,14 @@
 //  Copyright © 2015 apps. All rights reserved.
 //
 
-#import "PinManager.h"
+#import "NoteSingleton.h"
 
-@implementation PinManager
+@implementation NoteSingleton
 
 @synthesize pinsArray;
 
-+ (PinManager *) sharedManager{
-    static PinManager *sharedMyManager = nil;
++ (NoteSingleton *) sharedManager{
+    static NoteSingleton *sharedMyManager = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         sharedMyManager = [[self alloc] init];

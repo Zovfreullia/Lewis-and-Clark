@@ -8,11 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-@interface PinManager : NSObject
+@interface NoteSingleton : NSObject
 
 @property (nonatomic,strong) NSMutableArray *pinsArray;
 
-+ (PinManager *) sharedManager;
++ (NoteSingleton *) sharedManager;
 
 
 @end

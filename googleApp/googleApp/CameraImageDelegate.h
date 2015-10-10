@@ -7,11 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-@class CellFirstViewController;
+@class MainFeedCellXib;
 
 @protocol CameraImageDelegate <NSObject>
 
-- (void)customCellDidHitCameraButton:(CellFirstViewController *)cell;
+- (void)customCellDidHitCameraButton:(MainFeedCellXib *)cell;
 - (void)userHitsCameraButton:(NSString *)imageCamera;
 
 

@@ -8,9 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "CameraImageDelegate.h"
-#import "SWRevealViewController.h"
 
-@interface FirstViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@interface MainFeedTableViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 @property (nonatomic) UIImagePickerController *picker;
 

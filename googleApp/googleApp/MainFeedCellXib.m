@@ -6,9 +6,9 @@
 //  Copyright © 2015 apps. All rights reserved.
 //
 
-#import "CellFirstViewController.h"
+#import "MainFeedCellXib.h"
 
-@implementation CellFirstViewController
+@implementation MainFeedCellXib
 
 - (void)awakeFromNib {
     

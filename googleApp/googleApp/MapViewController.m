@@ -4,15 +4,14 @@
 
 @import GoogleMaps;
 
-#import "ViewController.h"
+#import "MapViewController.h"
 #import "UserPinClass.h"
-#import "PinManager.h"
+#import "NoteSingleton.h"
 #import <CoreLocation/CoreLocation.h>
 #import <GoogleMaps/GoogleMaps.h>
 
 
-
-@interface ViewController () <GMSPanoramaViewDelegate, CLLocationManagerDelegate, GMSMapViewDelegate>
+@interface MapViewController () <GMSPanoramaViewDelegate, CLLocationManagerDelegate, GMSMapViewDelegate>
 
 @property (nonatomic, retain) CLLocationManager *locationManager;
 @property (nonatomic) double lat;
@@ -22,7 +21,7 @@
 
 @end
 
-@implementation ViewController {
+@implementation MapViewController {
     BOOL configured_;
 }
 
@@ -82,7 +81,7 @@
     object.latitude = [NSString stringWithFormat:@"%f", self.lat];
     object.longitude = [NSString stringWithFormat:@"%f", self.lng];
     
-    NSMutableArray *pins = [PinManager sharedManager].pinsArray;
+    NSMutableArray *pins = [NoteSingleton sharedManager].pinsArray;
     
     [pins addObject:object];
     

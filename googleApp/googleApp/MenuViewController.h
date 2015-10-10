@@ -7,10 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "SWRevealViewController.h"
 
-@interface SWUITableViewCell : UITableViewCell
-@end
 
 @interface MenuViewController : UIViewController
 

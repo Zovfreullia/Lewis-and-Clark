@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "CameraImageDelegate.h"
 
-@interface CellFirstViewController : UITableViewCell <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate>
+@interface MainFeedCellXib : UITableViewCell <UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *selectedPinnedImage;
 @property (weak, nonatomic) IBOutlet UILabel *longitudeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *latitudeLabel;

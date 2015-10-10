@@ -7,9 +7,8 @@
 //
 
 #import "AppDelegate.h"
-#import "SWRevealViewController.h"
 #import "MenuViewController.h"
-#import "FirstViewController.h"
+#import "MainFeedTableViewController.h"
 
 @import GoogleMaps;
 

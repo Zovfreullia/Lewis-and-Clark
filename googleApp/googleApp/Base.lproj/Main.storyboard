@@ -9,7 +9,7 @@
         <!--Records-->
         <scene sceneID="8vS-AV-F4Z">
             <objects>
-                <viewController id="YSK-9p-tjf" customClass="FirstViewController" sceneMemberID="viewController">
+                <viewController id="YSK-9p-tjf" customClass="MainFeedTableViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aRF-0U-hyb"/>
                         <viewControllerLayoutGuide type="bottom" id="XhD-DF-Ma2"/>
@@ -101,7 +101,7 @@
         <!--Select-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MapViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
