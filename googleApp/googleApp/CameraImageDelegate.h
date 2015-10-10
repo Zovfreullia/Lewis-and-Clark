@@ -12,7 +12,7 @@
 @protocol CameraImageDelegate <NSObject>
 
 - (void)customCellDidHitCameraButton:(MainFeedCellXib *)cell;
-- (void)userHitsCameraButton:(NSString *)imageCamera;
+//- (void)userHitsCameraButton:(NSString *)imageCamera;
 
 
 @end

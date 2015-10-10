@@ -21,7 +21,6 @@
 }
 - (IBAction)takePictureButton:(UIButton *)sender {
     [self.delegate customCellDidHitCameraButton:self];
-    [self.delegate userHitsCameraButton:@"hi"];
 }
 
 
