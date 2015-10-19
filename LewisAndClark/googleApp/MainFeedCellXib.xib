@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9046" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9035"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellIdentifier" rowHeight="150" id="hTe-wn-zsj" customClass="MainFeedCellXib">
+            <rect key="frame" x="0.0" y="0.0" width="458" height="199"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hTe-wn-zsj" id="2UI-7h-X62">
+                <rect key="frame" x="0.0" y="0.0" width="458" height="198"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4aq-vE-8zB">
+                        <rect key="frame" x="13" y="22" width="100" height="100"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="100" id="0yx-Lf-Ic5"/>
+                            <constraint firstAttribute="height" constant="100" id="S5q-0z-H0E"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9n6-Kr-Dtg">
+                        <rect key="frame" x="23" y="40" width="80" height="80"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="80" id="71e-EU-eo5"/>
+                            <constraint firstAttribute="height" constant="80" id="BPc-Ow-xmy"/>
+                        </constraints>
+                        <connections>
+                            <action selector="takePictureButton:" destination="hTe-wn-zsj" eventType="touchUpInside" id="rJL-QM-2Q2"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Longitude:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vgr-Td-RFV">
+                        <rect key="frame" x="121" y="40" width="61" height="15"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Latitude:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HEP-we-Tgu">
+                        <rect key="frame" x="121" y="65" width="50" height="15"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstItem="HEP-we-Tgu" firstAttribute="top" secondItem="Vgr-Td-RFV" secondAttribute="bottom" constant="10" id="1Q6-yh-cAj"/>
+                    <constraint firstItem="HEP-we-Tgu" firstAttribute="leading" secondItem="4aq-vE-8zB" secondAttribute="trailing" constant="8" id="488-KA-TmM"/>
+                    <constraint firstItem="9n6-Kr-Dtg" firstAttribute="leading" secondItem="2UI-7h-X62" secondAttribute="leading" constant="23" id="Dzf-Sw-JcR"/>
+                    <constraint firstItem="4aq-vE-8zB" firstAttribute="top" secondItem="2UI-7h-X62" secondAttribute="top" constant="22" id="R9c-1x-cHC"/>
+                    <constraint firstItem="4aq-vE-8zB" firstAttribute="leading" secondItem="2UI-7h-X62" secondAttribute="leading" constant="13" id="YNP-sP-W8f"/>
+                    <constraint firstItem="Vgr-Td-RFV" firstAttribute="leading" secondItem="4aq-vE-8zB" secondAttribute="trailing" constant="8" id="avT-NG-2lc"/>
+                    <constraint firstAttribute="bottom" secondItem="9n6-Kr-Dtg" secondAttribute="bottom" constant="78" id="hZO-7d-4bX"/>
+                    <constraint firstItem="Vgr-Td-RFV" firstAttribute="top" secondItem="2UI-7h-X62" secondAttribute="topMargin" constant="32" id="s9Z-EU-5GS"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="cameraButton" destination="9n6-Kr-Dtg" id="oBY-et-ISi"/>
+                <outlet property="latitudeLabel" destination="HEP-we-Tgu" id="Byn-Xh-7lw"/>
+                <outlet property="longitudeLabel" destination="Vgr-Td-RFV" id="b9u-5v-owD"/>
+                <outlet property="selectedPinnedImage" destination="4aq-vE-8zB" id="Sf7-ah-fKg"/>
+            </connections>
+            <point key="canvasLocation" x="343" y="-37.5"/>
+        </tableViewCell>
+    </objects>
+</document>
