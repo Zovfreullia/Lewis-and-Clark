@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9035"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,7 +17,40 @@
                     <view key="view" contentMode="scaleToFill" id="MRP-CF-6h6">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wallpaper6" translatesAutoresizingMaskIntoConstraints="NO" id="3pl-3z-mBo">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="telescope" translatesAutoresizingMaskIntoConstraints="NO" id="9ix-hL-F0Z">
+                                <rect key="frame" x="200" y="210" width="200" height="180"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="EhQ-f6-BIl"/>
+                                    <constraint firstAttribute="width" constant="200" id="InI-Yh-xEL"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lewis and Clark" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nTc-jH-xt1">
+                                <rect key="frame" x="173" y="113" width="254" height="89"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="254" id="45w-cC-yK0"/>
+                                    <constraint firstAttribute="width" secondItem="nTc-jH-xt1" secondAttribute="height" multiplier="254:89" id="n9U-NB-gnM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Zapfino" family="Zapfino" pointSize="24"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3pl-3z-mBo" firstAttribute="leading" secondItem="MRP-CF-6h6" secondAttribute="leading" id="4UC-bU-1Nh"/>
+                            <constraint firstItem="YzP-ac-wAr" firstAttribute="top" secondItem="3pl-3z-mBo" secondAttribute="bottom" id="9Jk-3w-iSd"/>
+                            <constraint firstItem="9ix-hL-F0Z" firstAttribute="centerY" secondItem="MRP-CF-6h6" secondAttribute="centerY" id="9ON-cd-DLe"/>
+                            <constraint firstItem="9ix-hL-F0Z" firstAttribute="centerX" secondItem="MRP-CF-6h6" secondAttribute="centerX" id="GAw-0O-vLb"/>
+                            <constraint firstItem="3pl-3z-mBo" firstAttribute="top" secondItem="zd6-Ym-SLf" secondAttribute="bottom" constant="-20" id="HkI-qO-aEd"/>
+                            <constraint firstAttribute="trailing" secondItem="3pl-3z-mBo" secondAttribute="trailing" id="MpE-HM-hgh"/>
+                            <constraint firstItem="9ix-hL-F0Z" firstAttribute="top" secondItem="nTc-jH-xt1" secondAttribute="bottom" constant="8" symbolic="YES" id="bnX-AG-UmY"/>
+                            <constraint firstItem="nTc-jH-xt1" firstAttribute="centerX" secondItem="9ix-hL-F0Z" secondAttribute="centerX" id="nQk-Tr-hlr"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JIN-Gf-q9g" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -24,4 +58,8 @@
             <point key="canvasLocation" x="88" y="343"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="telescope" width="500" height="498"/>
+        <image name="wallpaper6" width="600" height="800"/>
+    </resources>
 </document>

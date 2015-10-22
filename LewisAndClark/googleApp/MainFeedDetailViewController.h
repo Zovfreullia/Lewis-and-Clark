@@ -19,8 +19,13 @@
 // Core Data
 #import "Note.h"
 
+// Delegate
+#import "SpeciesDelegate.h"
 
 @interface MainFeedDetailViewController : UIViewController <AVAudioRecorderDelegate, AVAudioPlayerDelegate, UITextFieldDelegate, NSFetchedResultsControllerDelegate, UITextViewDelegate>
+
+//Delegate
+@property (nonatomic, weak) id <SpeciesDelegate> delegate;
 
 // Core Data
 @property (nonatomic)Note *detailNote;

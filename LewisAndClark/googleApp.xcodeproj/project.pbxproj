@@ -16,6 +16,13 @@
 		3D530F671BB86D37009CCA50 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D530F661BB86D37009CCA50 /* CoreLocation.framework */; };
 		3D5E7C571BC95618006BD5F6 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D5E7C551BC95618006BD5F6 /* MenuViewController.m */; };
 		3D6880C61BCDBC5800026AE6 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D6880C51BCDBC5800026AE6 /* CoreData.framework */; };
+		3D7CD0661BD6DB1C0023D8E2 /* downloading.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3D7CD0651BD6DB1C0023D8E2 /* downloading.gif */; };
+		3D7CD0691BD834E60023D8E2 /* WikipediaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7CD0681BD834E60023D8E2 /* WikipediaViewController.m */; };
+		3D7CD06C1BD8361C0023D8E2 /* WikipediaHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7CD06B1BD8361C0023D8E2 /* WikipediaHelper.m */; };
+		3D7CD06F1BD85F250023D8E2 /* CompassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7CD06E1BD85F250023D8E2 /* CompassViewController.m */; };
+		3D7CD0731BD96FE00023D8E2 /* GeoPointCompass.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7CD0721BD96FE00023D8E2 /* GeoPointCompass.m */; };
+		3D7CD0751BD970410023D8E2 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D7CD0741BD970410023D8E2 /* arrow.png */; };
+		3D7CD0771BD9706B0023D8E2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D7CD0761BD9706B0023D8E2 /* Foundation.framework */; };
 		3D9BA6B91BD2A46A00485A94 /* Note+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D9BA6B61BD2A46A00485A94 /* Note+CoreDataProperties.m */; };
 		3D9BA6BA1BD2A46A00485A94 /* Note.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D9BA6B81BD2A46A00485A94 /* Note.m */; };
 		3DB077991BCDBD0200636E8C /* Pin.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3DB077971BCDBD0200636E8C /* Pin.xcdatamodeld */; };
@@ -59,6 +66,18 @@
 		3D5E7C541BC95618006BD5F6 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
 		3D5E7C551BC95618006BD5F6 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
 		3D6880C51BCDBC5800026AE6 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		3D7CD0651BD6DB1C0023D8E2 /* downloading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = downloading.gif; sourceTree = "<group>"; };
+		3D7CD0671BD834E60023D8E2 /* WikipediaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WikipediaViewController.h; sourceTree = "<group>"; };
+		3D7CD0681BD834E60023D8E2 /* WikipediaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WikipediaViewController.m; sourceTree = "<group>"; };
+		3D7CD06A1BD8361C0023D8E2 /* WikipediaHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WikipediaHelper.h; sourceTree = "<group>"; };
+		3D7CD06B1BD8361C0023D8E2 /* WikipediaHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WikipediaHelper.m; sourceTree = "<group>"; };
+		3D7CD06D1BD85F250023D8E2 /* CompassViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompassViewController.h; sourceTree = "<group>"; };
+		3D7CD06E1BD85F250023D8E2 /* CompassViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompassViewController.m; sourceTree = "<group>"; };
+		3D7CD0701BD96B1E0023D8E2 /* SpeciesDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeciesDelegate.h; sourceTree = "<group>"; };
+		3D7CD0711BD96FE00023D8E2 /* GeoPointCompass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoPointCompass.h; sourceTree = "<group>"; };
+		3D7CD0721BD96FE00023D8E2 /* GeoPointCompass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoPointCompass.m; sourceTree = "<group>"; };
+		3D7CD0741BD970410023D8E2 /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
+		3D7CD0761BD9706B0023D8E2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3D9BA6B51BD2A46A00485A94 /* Note+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Note+CoreDataProperties.h"; sourceTree = "<group>"; };
 		3D9BA6B61BD2A46A00485A94 /* Note+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Note+CoreDataProperties.m"; sourceTree = "<group>"; };
 		3D9BA6B71BD2A46A00485A94 /* Note.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Note.h; sourceTree = "<group>"; };
@@ -103,6 +122,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D7CD0771BD9706B0023D8E2 /* Foundation.framework in Frameworks */,
 				3DD2DDC41BD328E90041DB51 /* CoreBluetooth.framework in Frameworks */,
 				3DD2DDC21BD328E30041DB51 /* Accelerate.framework in Frameworks */,
 				3D6880C61BCDBC5800026AE6 /* CoreData.framework in Frameworks */,
@@ -140,6 +160,11 @@
 		3D530F4E1BB84E41009CCA50 /* googleApp */ = {
 			isa = PBXGroup;
 			children = (
+				3D7CD0741BD970410023D8E2 /* arrow.png */,
+				3D7CD0711BD96FE00023D8E2 /* GeoPointCompass.h */,
+				3D7CD0721BD96FE00023D8E2 /* GeoPointCompass.m */,
+				3D7CD06A1BD8361C0023D8E2 /* WikipediaHelper.h */,
+				3D7CD06B1BD8361C0023D8E2 /* WikipediaHelper.m */,
 				3DED50901BCC511200ACAE6C /* Images */,
 				3DED50891BCAEB4800ACAE6C /* Assets.xcassets */,
 				3DED50381BC9776600ACAE6C /* SWRevealViewController.h */,
@@ -170,6 +195,11 @@
 				3D9BA6B61BD2A46A00485A94 /* Note+CoreDataProperties.m */,
 				3D9BA6B71BD2A46A00485A94 /* Note.h */,
 				3D9BA6B81BD2A46A00485A94 /* Note.m */,
+				3D7CD0671BD834E60023D8E2 /* WikipediaViewController.h */,
+				3D7CD0681BD834E60023D8E2 /* WikipediaViewController.m */,
+				3D7CD06D1BD85F250023D8E2 /* CompassViewController.h */,
+				3D7CD06E1BD85F250023D8E2 /* CompassViewController.m */,
+				3D7CD0701BD96B1E0023D8E2 /* SpeciesDelegate.h */,
 			);
 			path = googleApp;
 			sourceTree = "<group>";
@@ -186,6 +216,7 @@
 		3DED50901BCC511200ACAE6C /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				3D7CD0651BD6DB1C0023D8E2 /* downloading.gif */,
 				3DED50AF1BCC609700ACAE6C /* snow.gif */,
 				3DED50AD1BCC601E00ACAE6C /* showerrain.gif */,
 				3DED50AB1BCC5FEC00ACAE6C /* rain.gif */,
@@ -202,6 +233,7 @@
 		41E3CACE38844B7AA5044A0D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3D7CD0761BD9706B0023D8E2 /* Foundation.framework */,
 				3DD2DDC31BD328E90041DB51 /* CoreBluetooth.framework */,
 				3DD2DDC11BD328E30041DB51 /* Accelerate.framework */,
 				3D6880C51BCDBC5800026AE6 /* CoreData.framework */,
@@ -293,9 +325,11 @@
 				3D530F5A1BB84E42009CCA50 /* Main.storyboard in Resources */,
 				3DED50A61BCC5B9800ACAE6C /* scatteredclouds.gif in Resources */,
 				3DED50AE1BCC601E00ACAE6C /* showerrain.gif in Resources */,
+				3D7CD0661BD6DB1C0023D8E2 /* downloading.gif in Resources */,
 				3DED508A1BCAEB4800ACAE6C /* Assets.xcassets in Resources */,
 				3DED50A81BCC5C0700ACAE6C /* clearsky.gif in Resources */,
 				3DED50A21BCC513500ACAE6C /* thunderstorm.gif in Resources */,
+				3D7CD0751BD970410023D8E2 /* arrow.png in Resources */,
 				3DE81DFC1BBEFF13003AF513 /* MainFeedCellXib.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -340,17 +374,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D7CD0691BD834E60023D8E2 /* WikipediaViewController.m in Sources */,
+				3D7CD0731BD96FE00023D8E2 /* GeoPointCompass.m in Sources */,
 				3D9BA6B91BD2A46A00485A94 /* Note+CoreDataProperties.m in Sources */,
 				3DE81DFF1BBF0160003AF513 /* MainFeedCellXib.m in Sources */,
 				3D5E7C571BC95618006BD5F6 /* MenuViewController.m in Sources */,
 				3DE81E0D1BBF1A15003AF513 /* NoteSingleton.m in Sources */,
 				3D530F571BB84E42009CCA50 /* MapViewController.m in Sources */,
 				3D9BA6BA1BD2A46A00485A94 /* Note.m in Sources */,
+				3D7CD06F1BD85F250023D8E2 /* CompassViewController.m in Sources */,
 				3DE81E071BBF1846003AF513 /* UserPinClass.m in Sources */,
 				3DED503A1BC9776600ACAE6C /* SWRevealViewController.m in Sources */,
 				3D530F541BB84E42009CCA50 /* AppDelegate.m in Sources */,
 				3DB077991BCDBD0200636E8C /* Pin.xcdatamodeld in Sources */,
 				3D530F511BB84E41009CCA50 /* main.m in Sources */,
+				3D7CD06C1BD8361C0023D8E2 /* WikipediaHelper.m in Sources */,
 				3DED50411BC9A21100ACAE6C /* MainFeedDetailViewController.m in Sources */,
 				3DE81DFA1BBEFDC2003AF513 /* MainFeedTableViewController.m in Sources */,
 			);

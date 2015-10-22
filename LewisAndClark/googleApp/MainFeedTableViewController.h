@@ -28,7 +28,10 @@
 #import "MainFeedCellXib.h"
 #import "SWRevealViewController.h"
 
-@interface MainFeedTableViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate, NSFetchedResultsControllerDelegate>
+// Delegate
+#import "SpeciesDelegate.h"
+
+@interface MainFeedTableViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate, NSFetchedResultsControllerDelegate, SpeciesDelegate>
 
 @property (nonatomic) UIImagePickerController *picker;
 

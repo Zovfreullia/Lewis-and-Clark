@@ -13,6 +13,9 @@
 @property (weak, nonatomic) IBOutlet UIImageView *selectedPinnedImage;
 @property (weak, nonatomic) IBOutlet UILabel *longitudeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *latitudeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *speciesNameLabel;
+
+
 
 @property (nonatomic, weak) id <CameraImageDelegate> delegate;
 @property (weak, nonatomic) IBOutlet UIButton *cameraButton;

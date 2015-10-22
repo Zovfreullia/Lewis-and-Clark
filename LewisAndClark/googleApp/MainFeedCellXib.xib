@@ -33,13 +33,19 @@
                         </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Longitude:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vgr-Td-RFV">
-                        <rect key="frame" x="121" y="40" width="61" height="15"/>
+                        <rect key="frame" x="121" y="70" width="61" height="15"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Latitude:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HEP-we-Tgu">
-                        <rect key="frame" x="121" y="65" width="50" height="15"/>
+                        <rect key="frame" x="121" y="95" width="50" height="15"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Species:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hjr-RF-DhC">
+                        <rect key="frame" x="121" y="47" width="317" height="15"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
@@ -50,11 +56,14 @@
                     <constraint firstItem="HEP-we-Tgu" firstAttribute="top" secondItem="Vgr-Td-RFV" secondAttribute="bottom" constant="10" id="1Q6-yh-cAj"/>
                     <constraint firstItem="HEP-we-Tgu" firstAttribute="leading" secondItem="4aq-vE-8zB" secondAttribute="trailing" constant="8" id="488-KA-TmM"/>
                     <constraint firstItem="9n6-Kr-Dtg" firstAttribute="leading" secondItem="2UI-7h-X62" secondAttribute="leading" constant="23" id="Dzf-Sw-JcR"/>
+                    <constraint firstItem="hjr-RF-DhC" firstAttribute="leading" secondItem="4aq-vE-8zB" secondAttribute="trailing" constant="8" id="HYj-sB-k9T"/>
                     <constraint firstItem="4aq-vE-8zB" firstAttribute="top" secondItem="2UI-7h-X62" secondAttribute="top" constant="22" id="R9c-1x-cHC"/>
                     <constraint firstItem="4aq-vE-8zB" firstAttribute="leading" secondItem="2UI-7h-X62" secondAttribute="leading" constant="13" id="YNP-sP-W8f"/>
                     <constraint firstItem="Vgr-Td-RFV" firstAttribute="leading" secondItem="4aq-vE-8zB" secondAttribute="trailing" constant="8" id="avT-NG-2lc"/>
+                    <constraint firstAttribute="trailing" secondItem="hjr-RF-DhC" secondAttribute="trailing" constant="20" id="b6a-8H-W6T"/>
                     <constraint firstAttribute="bottom" secondItem="9n6-Kr-Dtg" secondAttribute="bottom" constant="78" id="hZO-7d-4bX"/>
-                    <constraint firstItem="Vgr-Td-RFV" firstAttribute="top" secondItem="2UI-7h-X62" secondAttribute="topMargin" constant="32" id="s9Z-EU-5GS"/>
+                    <constraint firstItem="Vgr-Td-RFV" firstAttribute="top" secondItem="hjr-RF-DhC" secondAttribute="bottom" constant="8" id="hgL-SE-hT4"/>
+                    <constraint firstItem="Vgr-Td-RFV" firstAttribute="top" secondItem="2UI-7h-X62" secondAttribute="topMargin" constant="62" id="s9Z-EU-5GS"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -63,6 +72,7 @@
                 <outlet property="latitudeLabel" destination="HEP-we-Tgu" id="Byn-Xh-7lw"/>
                 <outlet property="longitudeLabel" destination="Vgr-Td-RFV" id="b9u-5v-owD"/>
                 <outlet property="selectedPinnedImage" destination="4aq-vE-8zB" id="Sf7-ah-fKg"/>
+                <outlet property="speciesNameLabel" destination="hjr-RF-DhC" id="S68-Q3-jUX"/>
             </connections>
             <point key="canvasLocation" x="343" y="-37.5"/>
         </tableViewCell>

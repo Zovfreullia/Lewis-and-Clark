@@ -89,6 +89,8 @@
     audioFileName = textField.text;
     self.detailNote.title = textField.text;
     
+    [self.delegate nameOfSpecies:textField.text];
+    
     [delegate.managedObjectContext save:nil];
 
     [self.view endEditing:YES];
@@ -125,9 +127,19 @@
     [super didReceiveMemoryWarning];
 }
 
-- (void)textViewDidChange:(UITextView *)textView {
+- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
+    
     self.detailNote.summary = textView.text;
+
+    
+    if([text isEqualToString:@"\n"]) {
+        [textView resignFirstResponder];
+        return NO;
+    }
+    
+    return YES;
 }
+
 
 #pragma mark - Start recording audio
 - (IBAction)startRecording:(id)sender

@@ -29,12 +29,19 @@
 // Camera
 @property (nonatomic) UIImage *placeHolderImage;
 
+// Delegate Species name
+@property (nonatomic) NSString *speciesName;
+
 @end
 
 @implementation MainFeedTableViewController
 
 
 
+#pragma mark - Species Name Delegate
+- (void)nameOfSpecies:(NSString *)name {
+    self.speciesName = name;
+}
 
 #pragma mark - Core Data Setup
 - (void)coreDataSetup {
@@ -72,7 +79,7 @@
         NSLog(@"Error deleting, %@", [error userInfo]);
     }
     
-    NSLog(@"Objects in Core Data: %u", self.fetchedResultsController.fetchedObjects.count);
+    NSLog(@"Objects in Core Data: %lu", self.fetchedResultsController.fetchedObjects.count);
     
     
     NSArray *coreDataObjects = [context executeFetchRequest:fetchRequest error:&error];
@@ -146,7 +153,7 @@
 }
 
 - (void) viewWillAppear:(BOOL)animated {
-    NSLog(@"Objects in Core Data: %u", self.fetchedResultsController.fetchedObjects.count);
+    NSLog(@"Objects in Core Data: %lu", self.fetchedResultsController.fetchedObjects.count);
     
     [self.tableView reloadData];
 }
@@ -176,6 +183,7 @@
     cell.delegate = self;
     cell.longitudeLabel.text = [NSString stringWithFormat:@"Latitude: %@",self.note.latitude];
     cell.latitudeLabel.text = [NSString stringWithFormat:@"Longitude: %@",self.note.longitude];
+    cell.speciesNameLabel.text = self.note.title;
     
 
     if (self.note.latitude != nil && self.note.longitude != nil){
@@ -226,6 +234,8 @@
         MainFeedDetailViewController *vc = segue.destinationViewController;
         
         vc.detailNote = self.note;
+        
+        vc.delegate = self;
     
         NSLog(@"Detail Note: %@", vc.detailNote);
         
@@ -315,12 +325,29 @@
 
 - (void) imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)image editingInfo:(NSDictionary *)editingInfo
 {
-    UserPinClass *pin = [self.pins objectAtIndex:self.selectedIndexPath.row];
-    [self dismissViewControllerAnimated:YES completion:nil];
-    pin.pinnedImage = image;
+
+    
+    AppDelegate *delegate = [UIApplication sharedApplication].delegate;
+    
+    MainFeedCellXib *cell;
+    self.selectedIndexPath = [self.tableView indexPathForCell:cell];
+    
+    //NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+    self.note = [self.fetchedResultsController.fetchedObjects objectAtIndex:self.selectedIndexPath.row];
+    
+    // Create a new photo object and set the image.
+    self.note.savedImage = image;
+    
+    self.note.hasUserImage = YES;
+    
+    NSLog(@"Note.photo: %@", self.note.photo);
     
     UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil);
-
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
+    [delegate.managedObjectContext save:nil];
+    
     [self.tableView reloadData];
 }
 
@@ -354,7 +381,7 @@
             NSLog(@"Error deleting movie, %@", [error userInfo]);
         }
         
-        NSLog(@"Objects in Core Data: %u", self.fetchedResultsController.fetchedObjects.count);
+        NSLog(@"Objects in Core Data: %lu", self.fetchedResultsController.fetchedObjects.count);
 
         [self.tableView reloadData];
     }
